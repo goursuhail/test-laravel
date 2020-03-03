@@ -25,6 +25,35 @@ Route::get('woolara', function (){
 
 });
 
+Route::get('seclara/{fname}', 'Secondcontroller@second');
+
+Route::get('thilara/{age}', 'Secondcontroller@third')->where(['age'=>"[0-9]+"]);
+
+Route::get('fourlara/{midname}', function ($midname){      // alternative method for defined function closure
+
+    echo "suhail asrar " .$midname;
+
+});
+
+Route::get('moblara/{mobile}', function ($mobile){
+
+    echo "mobile number " .$mobile;
+
+
+})->where(['mobile'=>"[0-9]+"]); // validation for numbers
+
+Route::get('pricefilter/{max}/{min?}', function ($max, $min=0){
+
+    echo "max = ".$max. " min = ".$min;
+
+})->middleware('testmidd');
+
+Route::get('testview', 'Testcontroller@index');
+Route::get('testview', 'Testcontroller@create');
+Route::get('testview', 'Testcontroller@loose');
+
+Route::get('helloview', 'Tutscontroller@index');
+
 Route::get('/', function () {
     return view('welcome');
 });

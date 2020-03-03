@@ -5,17 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello View</title>
+    <title>First View</title>
 </head>
 <body>
-<h1>Hello All</h1>
+<h1>Hello Navbar!</h1>
+
+<!-- body part -->
 
 
 
-
- {{ isset($data) ? $data : 'not defined' }}  <!-- core php method -->
-
-{{ $data or 'Data not found' }}   <!-- laravel method -->
-
+@yield('part')
 </body>
 </html>
