@@ -89,8 +89,9 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'email' => [
+            'required' => 'This :attribute required',
+            'email' => 'this is not right :attribute'
         ],
     ],
 

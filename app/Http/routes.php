@@ -54,6 +54,12 @@ Route::get('testview', 'Testcontroller@loose');
 
 Route::get('helloview', 'Tutscontroller@index');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('studentview', 'Studentcontroller@index');
+Route::get('classview', 'Studentcontroller@create');
+Route::get('teacherview', 'Studentcontroller@world');
+
+Route::get('productview', 'Productcontroller@index');
+
+Route::get('/', 'Contactcontroller@index');
+
+Route::post('/contact', 'Contactcontroller@create')->name('contactstore');
