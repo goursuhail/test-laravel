@@ -63,3 +63,5 @@ Route::get('productview', 'Productcontroller@index');
 Route::get('/', 'Contactcontroller@index');
 
 Route::post('/contact', 'Contactcontroller@create')->name('contactstore');
+
+
